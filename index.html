@@ -6,16 +6,13 @@
 <title>Portal Bolton</title>
 
 <style>
-/* Estilo Geral Inspirado em RPG/Rucoy */
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: #09090b;
     color: #f4f4f5;
-    scroll-behavior: smooth;
 }
 
-/* Menu de Navegação Superior */
 nav {
     background: #111114;
     padding: 15px;
@@ -39,12 +36,11 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
     background: #dc2626;
     color: white;
 }
 
-/* Cabeçalho / Banner Principal */
 header {
     background: linear-gradient(180deg, #18181b, #09090b);
     padding: 60px 20px;
@@ -80,7 +76,6 @@ h1 {
     margin: 0 auto 30px auto;
 }
 
-/* Botões do Banner */
 .cta-buttons {
     display: flex;
     justify-content: center;
@@ -114,10 +109,8 @@ h1 {
 
 .btn-secondary:hover {
     background: #3f3f46;
-    box-shadow: none;
 }
 
-/* Painel de Estatísticas */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -148,7 +141,6 @@ h1 {
     margin-top: 5px;
 }
 
-/* Seções do Site */
 section {
     max-width: 800px;
     margin: 40px auto;
@@ -166,7 +158,6 @@ h2 {
     margin-top: 0;
 }
 
-/* Estilo dos Cards (Hunted, Ladrões, Notícias) */
 .card {
     background: #18181b;
     border-left: 4px solid #dc2626;
@@ -175,35 +166,6 @@ h2 {
     margin-top: 15px;
 }
 
-.status-badge {
-    color: #ef4444;
-    font-weight: bold;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-.btn-sm {
-    display: inline-block;
-    background: #27272a;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    text-decoration: none;
-    margin-top: 10px;
-    border: 1px solid #3f3f46;
-}
-
-.btn-sm:hover {
-    background: #3f3f46;
-}
-
-/* Rodapé */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -224,121 +186,71 @@ footer {
     color: #a1a1aa;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .social-links a:hover {
     color: #ef4444;
 }
 </style>
-
 </head>
 <body>
 
-<!-- Menu de Navegação -->
+<!-- Menu Apontando para as Próximas Páginas -->
 <nav>
-    <a href="#inicio">🏠 Início</a>
-    <a href="#membros">👥 Membros</a>
-    <a href="#hunted">🎯 Hunted</a>
-    <a href="#ladroes">🥷 Ladrões</a>
-    <a href="#noticias">📰 Notícias</a>
-    <a href="#academia">🎓 Academia</a>
-    <a href="#contato">📞 Contato</a>
+    <a href="index.html" class="active">🏠 Início</a>
+    <a href="membros.html">👥 Membros</a>
+    <a href="hunted.html">🎯 Hunted</a>
+    <a href="ladroes.html">🥷 Ladrões</a>
+    <a href="noticias.html">📰 Notícias / YouTube</a>
+    <a href="regras.html">📜 Regras</a>
+    <a href="contato.html">📞 Contato</a>
 </nav>
 
-<!-- Banner Principal / Início -->
-<header id="inicio">
+<header>
     <div class="logo-container">🐻 BOLTON 🐻</div>
     <div class="logo-sub">Portal Oficial</div>
     <h1>Guilda Bolton</h1>
     <p class="slogan">"Eles entram em guerra querendo vencer. Nós entramos preparados para vencer."</p>
     
     <div class="cta-buttons">
-        <a href="#contato" class="btn">🛡️ Entrar na Guilda</a>
-        <a href="#regras" class="btn btn-secondary">📖 Ver Regras</a>
+        <!-- Seu Link do Rucoy Oficial -->
+        <a href="https://www.rucoyonline.com/guild/Bolton" target="_blank" class="btn">🛡️ Entrar na Guilda</a>
+        <a href="regras.html" class="btn btn-secondary">📖 Ver Regras</a>
     </div>
 </header>
 
-<!-- Painel de Estatísticas -->
+<!-- Aqui você pode mudar manualmente os números quando quiser atualizar -->
 <div class="stats-grid">
     <div class="stat-card">
-        <div>42</div>
+        <div>0</div>
         <div>👥 Membros</div>
     </div>
     <div class="stat-card">
-        <div>2</div>
+        <div>0</div>
         <div>⚔️ Hunts Ativas</div>
     </div>
     <div class="stat-card">
-        <div>1</div>
+        <div>0</div>
         <div>🥷 Ladrões</div>
     </div>
     <div class="stat-card">
-        <div>3</div>
+        <div>0</div>
         <div>📅 Eventos</div>
     </div>
 </div>
 
-<!-- Seção Últimas Notícias -->
-<section id="noticias">
-    <h2>📰 Últimas Notícias</h2>
-    <div class="card">
-        <strong>🔥 Evento Hunted iniciado!</strong>
-        <p>Alvos definidos pelo conselho. Recompensa inicial de 10kk para quem derrubar os marcados.</p>
-    </div>
+<section>
+    <h2>⚔️ Sobre a Bolton</h2>
+    <p>A Bolton é uma guilda focada em união, evolução e guerras no Rucoy Online. Aqui treinamos juntos, ajudamos nossos membros e buscamos sempre a vitória em campo de batalha. Seja bem-vindo ao nosso portal oficial!</p>
 </section>
 
-<!-- Seção Hunted -->
-<section id="hunted">
-    <h2>🎯 Alvos Hunted</h2>
-    <div class="card" style="border-left-color: #ef4444;">
-        <h3>🟥 ChaosPlayer</h3>
-        <p><strong>Guild:</strong> Chaos</p>
-        <p><strong>Recompensa:</strong> 10kk</p>
-        <p><strong>Status:</strong> <span class="status-badge">🔴 Ativo</span></p>
-    </div>
-</section>
-
-<!-- Seção Ladrões -->
-<section id="ladroes">
-    <h2>🥷 Lista Negra de Ladrões</h2>
-    <div class="card" style="border-left-color: #f97316;">
-        <h3>🟥 Player123</h3>
-        <p><strong>Item roubado:</strong> Golden Sword</p>
-        <p><strong>Data:</strong> 09/07/2026</p>
-        <a href="#" class="btn-sm">📷 Ver prova</a>
-    </div>
-</section>
-
-<!-- Seção Regras -->
-<section id="regras">
-    <h2>📜 Regras da Guilda</h2>
-    <div class="card">
-        <p>✅ Respeitar todos os membros acima de tudo.</p>
-        <p>✅ Participar dos eventos oficiais e calls do jogo.</p>
-        <p>✅ Ajudar novos jogadores da nossa Academia.</p>
-        <p>✅ Usar a tag oficial nos perfis.</p>
-    </div>
-</section>
-
-<!-- Seção Academia -->
-<section id="academia">
-    <h2>🎓 Academia Bolton</h2>
-    <p>Área voltada para o treinamento de novos talentos. Suba de nível com o suporte dos nossos veteranos antes de ir para as frentes de guerra principais!</p>
-</section>
-
-<!-- Seção Contato -->
-<section id="contato">
-    <h2>📞 Contato & Recrutamento</h2>
-    <p>Quer fazer parte do nosso exército ou fechar parcerias comerciais/diplomáticas? Entre em contato direto pelas nossas redes oficiais abaixo.</p>
-</section>
-
-<!-- Rodapé -->
 <footer>
     <p>© 2026 Bolton Guild - Todos os direitos reservados</p>
     <div class="social-links">
-        <a href="#">Discord</a>
-        <a href="#">WhatsApp</a>
-        <a href="#">YouTube</a>
+        <a href="https://discord.gg/Ae2xN8HGc5" target="_blank">Discord</a>
+        <a href="https://chat.whatsapp.com/HSxIMAWhBkP3TSGxFmr1iH" target="_blank">WhatsApp</a>
+        <a href="https://youtube.com/@hailbolton?si=1EyzJ7rW3gKTO8tq" target="_blank">YouTube</a>
     </div>
 </footer>
 
