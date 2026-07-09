@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato & Recrutamento - Bolton</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #09090b;
+    color: #f4f4f5;
+}
+
+nav {
+    background: #111114;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #dc2626;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #e4e4e7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background: #dc2626;
+    color: white;
+}
+
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #111114;
+    border-radius: 12px;
+    border: 1px solid #27272a;
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.15);
+    text-align: center;
+}
+
+h2 {
+    color: #ef4444;
+    border-bottom: 1px solid #27272a;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.contact-card {
+    background: #18181b;
+    border: 1px solid #27272a;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    border-color: #dc2626;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.2);
+}
+
+.contact-card h3 {
+    margin: 0 0 10px 0;
+}
+
+.contact-card p {
+    color: #a1a1aa;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+}
+
+.btn-link {
+    display: inline-block;
+    background: #27272a;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    width: 80%;
+    transition: 0.3s;
+}
+
+.btn-whatsapp { background: #25d366; color: black; }
+.btn-whatsapp:hover { background: #1ebd58; }
+
+.btn-discord { background: #5865f2; color: white; }
+.btn-discord:hover { background: #4752c4; }
+
+.btn-rucoy { background: #dc2626; color: white; }
+.btn-rucoy:hover { background: #b91c1c; }
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #111114;
+    border-top: 1px solid #27272a;
+    color: #71717a;
+    margin-top: 60px;
+}
+</style>
+</head>
+<body>
+
+<!-- Menu Superior -->
+<nav>
+    <a href="index.html">🏠 Início</a>
+    <a href="membros.html">👥 Membros</a>
+    <a href="hunted.html">🎯 Hunted</a>
+    <a href="ladroes.html">🥷 Ladrões</a>
+    <a href="noticias.html">📰 Notícias / YouTube</a>
+    <a href="regras.html">📜 Regras</a>
+    <a href="contato.html" class="active">📞 Contato</a>
+</nav>
+
+<section>
+    <h2>📞 Comunidade & Recrutamento</h2>
+    <p>Quer trocar uma ideia, entrar para a guilda ou acompanhar nossas redes? Escolha um dos nossos canais oficiais abaixo!</p>
+    
+    <div class="contact-grid">
+        <!-- WhatsApp -->
+        <div class="contact-card">
+            <h3>💬 Grupo do WhatsApp</h3>
+            <p>Entre no nosso chat oficial do WhatsApp para interagir, tirar dúvidas e colar com a guilda.</p>
+            <a href="https://chat.whatsapp.com/HSxIMAWhBkP3TSGxFmr1iH" target="_blank" class="btn-link btn-whatsapp">Entrar no WhatsApp</a>
+        </div>
+
+        <!-- Discord -->
+        <div class="contact-card">
+            <h3>🎮 Servidor do Discord</h3>
+            <p>Nosso ponto de encontro para chamadas de voz, estratégias de guerra e organização de eventos.</p>
+            <a href="https://discord.gg/Ae2xN8HGc5" target="_blank" class="btn-link btn-discord">Entrar no Discord</a>
+        </div>
+
+        <!-- Rucoy Oficial -->
+        <div class="contact-card">
+            <h3>🛡️ Bolton (Oficial)</h3>
+            <p>Confira a página oficial da nossa guilda principal direto no site do Rucoy Online.</p>
+            <a href="https://www.rucoyonline.com/guild/Bolton" target="_blank" class="btn-link btn-rucoy">Ver no Rucoy</a>
+        </div>
+
+        <!-- Academia Bolton -->
+        <div class="contact-card">
+            <h3>🎓 Academia Bolton</h3>
+            <p>Espaço dedicado para o recrutamento, treino e evolução dos novos guerreiros da Bolton.</p>
+            <a href="https://www.rucoyonline.com/guild/Academia%20Bolton" target="_blank" class="btn-link btn-rucoy">Ver Academia</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Bolton Guild - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
