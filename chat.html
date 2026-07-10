@@ -4,42 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chat Bolton</title>
+<title>Chat - Bolton</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background: #09090b;
-    color: white;
+    color: #f4f4f5;
 }
 
 nav {
     background: #111114;
     padding: 15px;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border-bottom: 2px solid #dc2626;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav a {
-    color: white;
+    color: #e4e4e7;
     text-decoration: none;
     font-weight: bold;
-    margin: 8px;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 5px;
 }
 
-.container {
-    max-width: 700px;
+nav a:hover, nav a.active {
+    background: #dc2626;
+    color: white;
+}
+
+section {
+    max-width: 800px;
     margin: 40px auto;
+    padding: 25px;
     background: #111114;
-    padding: 20px;
     border-radius: 12px;
     border: 1px solid #27272a;
 }
 
-h1 {
+h2 {
     color: #ef4444;
-    text-align: center;
+    border-bottom: 1px solid #27272a;
+    padding-bottom: 10px;
 }
 
 input, button {
@@ -47,7 +61,6 @@ input, button {
     padding: 12px;
     margin-top: 10px;
     border-radius: 6px;
-    border: none;
     box-sizing: border-box;
 }
 
@@ -60,6 +73,7 @@ input {
 button {
     background: #dc2626;
     color: white;
+    border: none;
     font-weight: bold;
     cursor: pointer;
 }
@@ -82,15 +96,24 @@ button:hover {
 }
 
 .msg {
-    margin-bottom: 12px;
-    padding: 10px;
     background: #18181b;
+    padding: 10px;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .nick {
     color: #ef4444;
     font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #111114;
+    border-top: 1px solid #27272a;
+    color: #71717a;
+    margin-top: 60px;
 }
 </style>
 
@@ -99,16 +122,24 @@ button:hover {
 <body>
 
 <nav>
-<a href="index.html">🏠 Início</a>
-<a href="noticias.html">📰 Notícias</a>
-<a href="hunted.html">🎯 Hunted</a>
-<a href="chat.html">💬 Chat</a>
+    <a href="index.html">🏠 Início</a>
+    <a href="membros.html">👥 Membros</a>
+    <a href="hunted.html">🎯 Hunted</a>
+    <a href="ladroes.html">🥷 Ladrões</a>
+    <a href="noticias.html">📰 Notícias / YouTube</a>
+    <a href="chat.html" class="active">💬 Chat</a>
+    <a href="regras.html">📜 Regras</a>
+    <a href="contato.html">📞 Contato</a>
 </nav>
 
 
-<div class="container">
+<section>
 
-<h1>⚔️ Chat da Bolton</h1>
+<h2>⚔️ Chat da Bolton</h2>
+
+<p>
+Área exclusiva para membros da guilda.
+</p>
 
 
 <div id="login">
@@ -117,7 +148,7 @@ button:hover {
 
 <input id="codigo" placeholder="Código de acesso">
 
-<button onclick="entrar()">Entrar</button>
+<button onclick="entrar()">Entrar no Chat</button>
 
 </div>
 
@@ -132,15 +163,19 @@ button:hover {
 
 </div>
 
-</div>
 
+</section>
+
+
+<footer>
+<p>© 2026 Bolton Guild - Todos os direitos reservados</p>
+</footer>
 
 
 <script type="module">
 
 import { initializeApp } from 
 "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
-
 
 import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from 
 "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
@@ -193,7 +228,6 @@ alert("Código incorreto ou nick vazio.");
 }
 
 
-
 window.enviar = async function(){
 
 let texto = document.getElementById("mensagem").value;
@@ -221,7 +255,6 @@ document.getElementById("mensagem").value="";
 
 
 function carregarMensagens(){
-
 
 const q = query(collection(db,"mensagens"), orderBy("data"));
 
@@ -264,7 +297,6 @@ area.scrollTop = area.scrollHeight;
 
 
 </script>
-
 
 </body>
 </html>
