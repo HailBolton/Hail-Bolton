@@ -7,129 +7,162 @@
 <title>Chat - Bolton</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #09090b;
-    color: #f4f4f5;
+
+*{
+    box-sizing:border-box;
 }
 
-nav {
-    background: #111114;
-    padding: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid #dc2626;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+body{
+    margin:0;
+    font-family:'Segoe UI',Arial,sans-serif;
+    background:#09090b;
+    color:#f4f4f5;
 }
 
-nav a {
-    color: #e4e4e7;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 6px 12px;
-    border-radius: 5px;
+
+nav{
+    background:#111114;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid #dc2626;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-nav a:hover, nav a.active {
-    background: #dc2626;
-    color: white;
+
+nav a{
+    color:#e4e4e7;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+    padding:7px 12px;
+    border-radius:6px;
 }
 
-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 25px;
-    background: #111114;
-    border-radius: 12px;
-    border: 1px solid #27272a;
+
+nav a:hover,
+nav a.active{
+    background:#dc2626;
+    color:white;
 }
 
-h2 {
-    color: #ef4444;
-    border-bottom: 1px solid #27272a;
-    padding-bottom: 10px;
+
+section{
+    max-width:850px;
+    margin:35px auto;
+    padding:25px;
+    background:#111114;
+    border-radius:15px;
+    border:1px solid #27272a;
 }
 
-input, button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 6px;
-    box-sizing: border-box;
+
+h2{
+    color:#ef4444;
+    text-align:center;
 }
 
-input {
-    background: #09090b;
-    color: white;
-    border: 1px solid #27272a;
+
+p{
+    color:#a1a1aa;
+    text-align:center;
 }
 
-button {
-    background: #dc2626;
-    color: white;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
+
+input,button{
+    width:100%;
+    padding:13px;
+    margin-top:10px;
+    border-radius:8px;
+    font-size:15px;
 }
 
-button:hover {
-    background: #b91c1c;
+
+input{
+    background:#09090b;
+    border:1px solid #27272a;
+    color:white;
 }
 
-#chat {
-    display: none;
+
+button{
+    background:#dc2626;
+    color:white;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-#messages {
-    height: 350px;
-    overflow-y: auto;
-    background: #09090b;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
+
+button:hover{
+    background:#b91c1c;
 }
 
-.msg {
-    background: #18181b;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+
+#chat{
+    display:none;
 }
 
-.nick {
-    color: #ef4444;
-    font-weight: bold;
+
+#messages{
+    height:400px;
+    overflow-y:auto;
+    background:#09090b;
+    padding:15px;
+    border-radius:12px;
+    margin-top:20px;
 }
 
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background: #111114;
-    border-top: 1px solid #27272a;
-    color: #71717a;
-    margin-top: 60px;
+
+.msg{
+    background:#18181b;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:12px;
+    border-left:3px solid #dc2626;
+    word-break:break-word;
 }
+
+
+.nick{
+    color:#ef4444;
+    font-weight:bold;
+}
+
+
+.time{
+    font-size:11px;
+    color:#71717a;
+    float:right;
+}
+
+
+footer{
+    text-align:center;
+    padding:35px;
+    color:#71717a;
+}
+
 </style>
 
 </head>
 
 <body>
 
+
 <nav>
-    <a href="index.html">🏠 Início</a>
-    <a href="membros.html">👥 Membros</a>
-    <a href="hunted.html">🎯 Hunted</a>
-    <a href="ladroes.html">🥷 Ladrões</a>
-    <a href="noticias.html">📰 Notícias / YouTube</a>
-    <a href="chat.html" class="active">💬 Chat</a>
-    <a href="regras.html">📜 Regras</a>
-    <a href="contato.html">📞 Contato</a>
+<a href="index.html">🏠 Início</a>
+<a href="membros.html">👥 Membros</a>
+<a href="hunted.html">🎯 Hunted</a>
+<a href="ladroes.html">🥷 Ladrões</a>
+<a href="noticias.html">📰 Notícias / YouTube</a>
+<a href="chat.html" class="active">💬 Chat</a>
+<a href="regras.html">📜 Regras</a>
+<a href="contato.html">📞 Contato</a>
 </nav>
 
 
@@ -138,15 +171,13 @@ footer {
 <h2>⚔️ Chat da Bolton</h2>
 
 <p>
-Área exclusiva para membros da guilda.
+Converse com os membros da guilda.
 </p>
 
 
 <div id="login">
 
 <input id="nick" placeholder="Seu nick no Rucoy">
-
-<input id="codigo" placeholder="Código de acesso">
 
 <button onclick="entrar()">Entrar no Chat</button>
 
@@ -157,17 +188,19 @@ footer {
 
 <div id="messages"></div>
 
+
 <input id="mensagem" placeholder="Digite sua mensagem">
 
+
 <button onclick="enviar()">Enviar</button>
+
 
 </div>
 
 
 </section>
 
-
-<footer>
+    <footer>
 <p>© 2026 Bolton Guild - Todos os direitos reservados</p>
 </footer>
 
@@ -182,13 +215,21 @@ import { getFirestore, collection, addDoc, query, orderBy, onSnapshot } from
 
 
 const firebaseConfig = {
+
 apiKey: "AIzaSyDLErO616vB9thxJHv0njesKERrUbWpTBU",
+
 authDomain: "hail-bolton.firebaseapp.com",
+
 projectId: "hail-bolton",
+
 storageBucket: "hail-bolton.firebasestorage.app",
+
 messagingSenderId: "1058732171341",
+
 appId: "1:1058732171341:web:19fe31dc88160000373c04",
+
 measurementId: "G-47E5GLQ6CM"
+
 };
 
 
@@ -197,106 +238,217 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-let usuario = "";
 
+let usuario = localStorage.getItem("boltonNick") || "";
+
+
+
+// ENTRAR NO CHAT
 
 window.entrar = function(){
 
-let nick = document.getElementById("nick").value;
 
-let codigo = document.getElementById("codigo").value;
+let nick = document.getElementById("nick").value.trim();
 
 
-if(codigo === "HAILBOLTON2026" && nick){
+if(nick.length < 2){
+
+alert("Digite um nick válido.");
+
+return;
+
+}
+
 
 usuario = nick;
+
+
+localStorage.setItem("boltonNick", nick);
+
 
 document.getElementById("login").style.display="none";
 
 document.getElementById("chat").style.display="block";
 
+
 carregarMensagens();
 
-}
-
-else{
-
-alert("Código incorreto ou nick vazio.");
 
 }
 
-}
 
+
+// ENVIAR MENSAGEM
 
 window.enviar = async function(){
 
-let texto = document.getElementById("mensagem").value;
+
+let campo = document.getElementById("mensagem");
+
+let texto = campo.value.trim();
 
 
-if(texto){
+
+if(!texto) return;
+
+
 
 await addDoc(collection(db,"mensagens"),{
 
+
 nick: usuario,
 
-texto: texto,
+texto:texto,
 
-data: Date.now()
+data:Date.now()
+
 
 });
 
 
-document.getElementById("mensagem").value="";
+campo.value="";
+
 
 }
 
+
+
+// ENTER PARA ENVIAR
+
+document.getElementById("mensagem").addEventListener("keypress",function(e){
+
+
+if(e.key==="Enter"){
+
+enviar();
+
 }
 
 
+});
+
+
+
+
+// CARREGAR MENSAGENS
 
 function carregarMensagens(){
 
-const q = query(collection(db,"mensagens"), orderBy("data"));
+
+const q = query(
+
+collection(db,"mensagens"),
+
+orderBy("data")
+
+);
+
 
 
 onSnapshot(q,(snapshot)=>{
 
 
-let area = document.getElementById("messages");
+let area=document.getElementById("messages");
+
 
 area.innerHTML="";
 
 
+
 snapshot.forEach((doc)=>{
 
-let m = doc.data();
+
+let m=doc.data();
+
+
+
+let horario="";
+
+
+if(m.data){
+
+let data=new Date(m.data);
+
+horario=data.toLocaleTimeString("pt-BR",{
+
+hour:"2-digit",
+
+minute:"2-digit"
+
+});
+
+}
+
 
 
 area.innerHTML += `
 
+
 <div class="msg">
 
-<span class="nick">${m.nick}</span><br>
+<span class="nick">
+
+${m.nick}
+
+</span>
+
+
+<span class="time">
+
+${horario}
+
+</span>
+
+
+<br><br>
+
 
 ${m.texto}
 
+
 </div>
+
 
 `;
 
-});
-
-
-area.scrollTop = area.scrollHeight;
 
 
 });
+
+
+
+area.scrollTop=area.scrollHeight;
+
+
+
+});
+
 
 
 }
 
 
+
+// Se já tinha entrado antes
+
+if(usuario){
+
+
+document.getElementById("login").style.display="none";
+
+document.getElementById("chat").style.display="block";
+
+
+carregarMensagens();
+
+
+}
+
+
+
 </script>
 
+
 </body>
+
 </html>
